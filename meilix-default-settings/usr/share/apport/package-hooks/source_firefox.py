@@ -896,8 +896,7 @@ class Prefs:
                 self.index = 0
                 self.keys = []
                 for k in prefs.prefs.keys():
-                    try:
-                        test = prefs[k]
+                    try
                         self.keys.append(k)
                     except:
                         pass
@@ -1004,8 +1003,7 @@ class Profile:
         tmp_db = mkstemp_copy(os.path.join(self.path, "extensions.sqlite"))
         conn = sqlite3.connect(tmp_db)
 
-        def get_extension_from_row(row):
-            moz_id = row[0]
+        def get_extension_from_row(row)
             ext_id = row[1]
             location = row[2]
             ext_ver = row[3]
@@ -1473,7 +1471,6 @@ def add_info(report, ui):
 
 if __name__ == "__main__":
     import apport
-    from apport import packaging
     D = {}
     D['Package'] = 'firefox'
     D['SourcePackage'] = 'firefox'
